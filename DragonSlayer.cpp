@@ -3,7 +3,7 @@
 #include "Utility.h"
 #include "AttackItem.h"
 
-DragonSlayer::DragonSlayer( std:: string name_, int hitPoints, int armor ) : Character(hitPoints, armor, 57 ), name(name_) 
+DragonSlayer::DragonSlayer( std:: string name_, int hitPoints, int armor ) : Character(hitPoints, armor, 4 ), name(name_) 
 {
     
 }
@@ -24,15 +24,15 @@ void DragonSlayer::attack(Character& other)
         //note that items are single-use only, so you need to reset it after use.  
         //look in the Character class for how the other item types are reset after use.
 
-        if (attackItem == nullptr)
-        {
+        // if (attackItem == nullptr)
+        // {
 
-        }
-        else 
-        {
-            attackItem->use(this);
-            attackItem.reset();
-        }
+        // }
+        // else 
+        // {
+        //     attackItem->use(this);
+        //     attackItem.reset();
+        // }
 
         while( dragon->getHP() > 0 )
         {

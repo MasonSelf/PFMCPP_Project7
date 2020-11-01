@@ -8,8 +8,8 @@ struct Dragon : public Character
     
     void attack(Character& other) override;
 
-    const std::string& Dragon::getName() override;
-    std::string Dragon::getStats() override;
+    const std::string& getName() override;
+    std::string getStats() override;
 private:
     const std::string name;
 };

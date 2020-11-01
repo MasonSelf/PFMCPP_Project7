@@ -19,7 +19,8 @@ struct Character
     
     virtual const std::string& getName() = 0;
     virtual std::string getStats() = 0;
-    
+    //std::string getStats();
+
     virtual void attack( Character& other );
     void defend();
     
@@ -53,14 +54,14 @@ struct Character
         std::cout << getName() << "'s attack damage level has been boosted to " << attackDamage << std::endl;
     }
 
-    void printStats()
-    {
-        std::cout << getName() << "'s stats: " << std::endl;
-        std::cout << getStats(); //make your getStats() use a function from the Utility.h
+    void printStats();
+    // {
+    //     std::cout << getName() << "'s stats: " << std::endl;
+    //     std::cout << getStats(); //make your getStats() use a function from the Utility.h
         
-        std::cout << std::endl;
-        std::cout << std::endl;
-    }
+    //     std::cout << std::endl;
+    //     std::cout << std::endl;
+    // }
 protected:
     std::vector<std::unique_ptr<Item>> defensiveItems;
     std::vector<std::unique_ptr<Item>> helpfulItems;

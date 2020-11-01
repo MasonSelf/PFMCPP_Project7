@@ -70,6 +70,8 @@ it's very easy to mess this task up.
 //==========================================================
 int main()
 {
+    
+    
                       //name, hit points, armor. 
     Dwarf dwarf { "Maldin the Dwarf", 3, 1 };
     Paladin paladin { "Warrick the Paladin", 5, 2 };
