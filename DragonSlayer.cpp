@@ -2,7 +2,7 @@
 #include "Dragon.h"
 #include "Utility.h"
 
-DragonSlayer::DragonSlayer( std:: string name_, it hitPoints, int armor ) : Character(hitPoints, armor, 57 ), name(name_) {}
+DragonSlayer::DragonSlayer( std:: string name_, int hitPoints, int armor ) : Character(hitPoints, armor, 57 ), name(name_) {}
 
 const std::string& DragonSlayer::getName()
 {
