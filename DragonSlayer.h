@@ -5,7 +5,11 @@
 struct DragonSlayer : public Character
 {
     DragonSlayer( std::string name_, int hitPoints, int armor );
-    
+    ~DragonSlayer()
+    {
+        delete attackItem;
+        attackItem = nullptr;
+    }
     const std::string& getName() override;
     std::string getStats() override;
     void attack(Character& other) override;

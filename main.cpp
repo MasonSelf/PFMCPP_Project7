@@ -53,6 +53,7 @@ it's very easy to mess this task up.
 #include "Paladin.h"
 #include "Dragon.h"
 #include "DragonSlayer.h"
+#include "Utility.h"
 //==========================================================
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
