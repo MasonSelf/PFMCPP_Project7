@@ -1,11 +1,12 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
 #include "Utility.h"
-#include "AttackItem.h"
+
 
 DragonSlayer::DragonSlayer( std:: string name_, int hitPoints, int armor ) : Character(hitPoints, armor, 4 ), name(name_) 
 {
-    
+    //attackItem.reset(new AttackItem);
+    attackItem = new AttackItem;
 }
 
 const std::string& DragonSlayer::getName()
@@ -24,15 +25,11 @@ void DragonSlayer::attack(Character& other)
         //note that items are single-use only, so you need to reset it after use.  
         //look in the Character class for how the other item types are reset after use.
 
-        // if (attackItem == nullptr)
-        // {
-
-        // }
-        // else 
-        // {
-        //     attackItem->use(this);
-        //     attackItem.reset();
-        // }
+        if (attackItem != nullptr)
+        {
+            attackItem->use(this);
+            attackItem = new AttackItem;
+        }
 
         while( dragon->getHP() > 0 )
         {

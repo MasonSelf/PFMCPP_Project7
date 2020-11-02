@@ -70,7 +70,7 @@ it's very easy to mess this task up.
 //==========================================================
 int main()
 {
-    
+     
     
                       //name, hit points, armor. 
     Dwarf dwarf { "Maldin the Dwarf", 3, 1 };

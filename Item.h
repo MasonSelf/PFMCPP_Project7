@@ -1,8 +1,10 @@
 #pragma once
 
 #include <string>
+// #include "Character.h"
 
 struct Character;
+
 struct Item
 {
     virtual ~Item() { }
