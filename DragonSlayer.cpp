@@ -7,6 +7,9 @@ DragonSlayer::DragonSlayer( std:: string name_, int hitPoints, int armor ) : Cha
 {
     //attackItem.reset(new AttackItem);
     attackItem = new AttackItem;
+
+    helpfulItems = makeHelpfulItems(rand());
+    defensiveItems = makeDefensiveItems(rand());
 }
 
 const std::string& DragonSlayer::getName()
