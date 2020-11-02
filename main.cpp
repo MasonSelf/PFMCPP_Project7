@@ -54,6 +54,7 @@ it's very easy to mess this task up.
 #include "Dragon.h"
 #include "DragonSlayer.h"
 #include "Utility.h"
+
 //==========================================================
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -71,7 +72,7 @@ it's very easy to mess this task up.
 //==========================================================
 int main()
 {
-     
+    
     
                       //name, hit points, armor. 
     Dwarf dwarf { "Maldin the Dwarf", 3, 1 };

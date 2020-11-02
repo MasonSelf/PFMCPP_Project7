@@ -5,8 +5,8 @@
 
 DragonSlayer::DragonSlayer( std:: string name_, int hitPoints, int armor ) : Character(hitPoints, armor, 4 ), name(name_) 
 {
-    //attackItem.reset(new AttackItem);
-    attackItem = new AttackItem;
+    attackItem.reset(new AttackItem);
+    //attackItem = new AttackItem;
 
     helpfulItems = makeHelpfulItems(rand());
     defensiveItems = makeDefensiveItems(rand());
@@ -31,7 +31,8 @@ void DragonSlayer::attack(Character& other)
         if (attackItem != nullptr)
         {
             attackItem->use(this);
-            attackItem = new AttackItem;
+            //attackItem = new AttackItem;
+            attackItem.reset();
         }
 
         while( dragon->getHP() > 0 )
