@@ -3,10 +3,10 @@
 #include "HelpfulItem.h"
 #include "DefensiveItem.h"
 #include "Character.h"
-// #include "Dwarf.h"
-// #include "Paladin.h"
-// #include "Dragon.h"
-// #include "DragonSlayer.h"
+#include "Dwarf.h"
+#include "Paladin.h"
+#include "Dragon.h"
+#include "DragonSlayer.h"
 
 
 std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
@@ -99,13 +99,12 @@ void useAttackItem(Character* character, Item* item)
     }
     else if( auto* chDS = dynamic_cast<DragonSlayer*>(character))
     {
-        //assert(false);
         //DragonSlayers get a 10x boost when attacking dragons, from their attack item.
         //so their attack item should boost their attack damage by a factor of 10
         //this means you need to GET the attack damage, multiply it by the item's boost, and BOOST the attackDamage with that multiplied value.  
         //check Character.h for available member functions you can use.
 
-        chDS->boostAttackDamage(item->getBoost() * 10);
+        chDS->boostAttackDamage(item->getBoost() * chDS->getAttackDamage());
     }
     else if( auto* ch = dynamic_cast<Dragon*>(character) )
     {
