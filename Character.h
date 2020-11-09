@@ -35,6 +35,8 @@ struct Character
     
     const std::vector<std::unique_ptr<Item>>& getHelpfulItems() const { return helpfulItems; }
     const std::vector<std::unique_ptr<Item>>& getDefensiveItems() const { return defensiveItems; }
+
+    void victoryStatReset( int& currentStat, int& initialStat );
     
     void boostArmor( int amount )
     {

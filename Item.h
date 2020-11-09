@@ -15,4 +15,5 @@ struct Item
 private:
     std::string name;
     int boost;
+
 };
