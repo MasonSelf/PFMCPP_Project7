@@ -3,7 +3,7 @@
 #include "Utility.h"
 
 
-DragonSlayer::DragonSlayer( std:: string name_, int hitPoints, int armor ) : Character(hitPoints, armor, 4 ), name(name_) 
+DragonSlayer::DragonSlayer( std:: string name_, int hitPoints, int armor ) : Character(getHP(), armor, 4 ), name(name_) 
 {
     attackItem.reset(new AttackItem);
     //attackItem = new AttackItem;
