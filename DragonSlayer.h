@@ -3,7 +3,7 @@
 #include "AttackItem.h"
 #include <memory>
 
-struct DragonSlayer : public Character
+struct DragonSlayer : Character
 {
     DragonSlayer( std::string name_, int hitPoints, int armor );
     // ~DragonSlayer()
