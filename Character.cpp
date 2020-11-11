@@ -87,6 +87,20 @@ int Character::takeDamage(int damage)
     return hitPoints;
 }
 
+void victoryStatReset(int& currentStat, int& initialStat)
+{
+    /*
+    When you defeat another Character: 
+    a) your stats are restored to their initial value if they are lower than it.
+    b) your stats are boosted 10%
+    c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
+    */
+    if (currentStat < initialStat )
+        currentStat = initialStat;  //a
+    currentStat *= 1.1f;            //b
+    initialStat = currentStat;      //c
+}
+
 void Character::attackInternal(Character& other)
 {
     if( other.hitPoints <= 0 )
@@ -100,19 +114,6 @@ void Character::attackInternal(Character& other)
     }
 }
 
-void Character::victoryStatReset(int& currentStat, int& initialStat)
-{
-    /*
-    When you defeat another Character: 
-    a) your stats are restored to their initial value if they are lower than it.
-    b) your stats are boosted 10%
-    c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
-    */
-    if (currentStat < initialStat )
-        currentStat = initialStat;  //a
-    currentStat *= 1.1f;            //b
-    initialStat = currentStat;      //c
-}
 
 std::string Character::getStats() 
 {
