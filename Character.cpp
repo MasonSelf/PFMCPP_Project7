@@ -14,6 +14,9 @@ Character::Character(int hp, int armor_, int attackDamage_ ) :
     initialHitPoints.reset( new int(hitPoints) );
     initialArmorLevel.reset( new int( armor) );
     initialAttackDamage.reset( new int( attackDamage) );
+
+    helpfulItems = makeHelpfulItems(rand() % 10);
+    defensiveItems = makeDefensiveItems(rand() % 10);
 }
 
 void Character::attack( Character& other )

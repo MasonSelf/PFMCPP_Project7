@@ -5,7 +5,7 @@
 
 struct DragonSlayer : Character
 {
-    DragonSlayer( std::string name_, int hitPoints, int armor );
+    DragonSlayer( std::string name_, int hp, int armor );
     // ~DragonSlayer()
     // {
     //     delete attackItem;
