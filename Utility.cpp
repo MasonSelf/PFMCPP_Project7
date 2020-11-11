@@ -8,6 +8,10 @@
 #include "Dragon.h"
 #include "DragonSlayer.h"
 
+int rando()
+{
+    return (rand() % 10);
+}
 
 std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
 {

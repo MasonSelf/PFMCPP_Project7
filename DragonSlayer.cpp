@@ -8,8 +8,8 @@ DragonSlayer::DragonSlayer( std:: string name_, int hp, int armor ) : Character(
     attackItem.reset(new AttackItem);
     //attackItem = new AttackItem;
 
-    // helpfulItems = makeHelpfulItems(rand());
-    // defensiveItems = makeDefensiveItems(rand());
+    helpfulItems = makeHelpfulItems(rando());
+    defensiveItems = makeDefensiveItems(rando());
 }
 
 const std::string& DragonSlayer::getName()

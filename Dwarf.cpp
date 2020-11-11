@@ -4,8 +4,8 @@
 
 Dwarf::Dwarf( std::string name_, int hp, int armor ) : Character(hp, armor, 4), name(name_)
 {
-    // helpfulItems = makeHelpfulItems(2); 
-    // defensiveItems = makeDefensiveItems(4);
+    helpfulItems = makeHelpfulItems(rando()); 
+    defensiveItems = makeDefensiveItems(rando());
 }
 
 const std::string& Dwarf::getName()
