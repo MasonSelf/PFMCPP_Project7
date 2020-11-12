@@ -53,6 +53,8 @@ it's very easy to mess this task up.
 #include "Paladin.h"
 #include "Dragon.h"
 #include "DragonSlayer.h"
+#include "Utility.h"
+
 //==========================================================
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -70,12 +72,12 @@ it's very easy to mess this task up.
 //==========================================================
 int main()
 {
+    
                       //name, hit points, armor. 
     Dwarf dwarf { "Maldin the Dwarf", 3, 1 };
     Paladin paladin { "Warrick the Paladin", 5, 2 };
     Dragon dragon { "Garry The Dragon", 200, 50 };
     DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
-    
     std::cout << "\nstart of battle" << std::endl;
 
     paladin.defend();
